@@ -107,3 +107,11 @@ tar -xzf extensions/guacamole-auth-ldap/target/*.tar.gz \
     "*.jar"                                             \
     "*.ldif"
 
+#
+# Copy OPENID auth extension
+#
+
+mkdir -p "$DESTINATION/openid"
+cp extensions/guacamole-auth-openid/target/guacamole-auth-openid*.jar \
+    "$DESTINATION/openid"/
+
