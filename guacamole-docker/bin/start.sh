@@ -502,6 +502,11 @@ END
     exit 1;
 fi
 
+echo "mysql-disallow-simultaneous-connections: false" >> "$GUACAMOLE_PROPERTIES"
+echo "mysql-disallow-duplicate-connections: false" >> "$GUACAMOLE_PROPERTIES"
+echo "openid-scope: openid email profile" >> "$GUACAMOLE_PROPERTIES"
+echo "openid-username-claim-type: preferred_username" >> "$GUACAMOLE_PROPERTIES"
+
 #
 # Finally start Guacamole (under Tomcat)
 #
